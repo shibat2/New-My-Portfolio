@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: #ededed;
+    
+ }
+
+body {
+    background: linear-gradient(rgba(30, 15, 0, 0.5), rgba(30, 15, 0, 0.5)),
+      url(img/bg.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+ @media (max-width: 900px) {
+    body {    
+        background-position: 23%;
+    }
+} 
+
+
+:root,
+html {
+  /* スムーススクロール用 */
+  scroll-behavior: smooth;
+}
+
+
+.skill-content .work {
+    box-shadow: 15px 15px 15px 0 #343434;
+}
+
+
+/* トップへ戻るボタン (参考: https://www.fuji-blo.com/entry/page-top) */
+#page-top {
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+    height: 50px;
+    padding: 0 0 0 35px;
+  
+    border-top: solid 1px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transform: rotate(90deg);
+  }
+  #page-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+  }
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+.photo {
+    padding: 70px;
+    height: 100vh;
+    z-index: -1;
+}
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+.slider img {
+    width:auto;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:500px;
+}
+
+.slider .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+@media (max-width: 900px) {
+    .photo {
+        height: 250px;
+        padding: 30px;
+    }
+    .slider img {
+        width:auto;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+        height:200px;
+    }
+
+}
+
+
+
+/*------------------矢印の設定----------------------*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ffffff;/*矢印の色*/
+    border-right: 2px solid #ffffff;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+    padding: 5px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -20px;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -20px;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/*------------------矢印の設定----------------------*/
+
+
+/*------------------ヘッダーを上部に固定----------------------*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999; /*重なりを調整*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(30, 15, 0, 0.5);
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  header ul li a {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  @media (min-width: 769px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 24px 0 60px;
+    }
+    header ul {
+      margin-top: 0;
+      height: 100%;
+    }
+    header li {
+      display: flex;
+      align-items: center;
+    }
+    header div {
+        margin-top: 10px;
+    }
+    
+    
+  }
+  @media (max-width: 760px) {
+    header div {
+      width: 100%; /* 幅を100%に設定 */
+      text-align: center;
+      margin: 20px auto; /* 上下のマージンを20px、左右のマージンをautoに設定 */
+    }
+  }
+  /*----------------------------------------*/
+
+
+/*==================================================
+　5-3-8 円が線に変化
+===================================*/
+
+
+.gnavi li a{
+    /*円の基点とするためrelativeを指定*/
+  position: relative;
+  text-decoration: none;
+}
+
+.gnavi li.here a,
+.gnavi li a:hover
+{
+  color:#979797;
+}
+.RM a:hover{
+  color:#ffffff;
+}
+
+.gnavi li a::after
+{
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線になる丸の形状*/
+    width: 100%;
+    height: 5px;
+    border-radius: 50%;
+    background:#ffffff;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0.04, 1);/*X方向0.04、Y方向1*/
+    transform-origin:center bottom;/*中央下部基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.here a::after,
+.gnavi li a:hover::after{
+    height: 2px;/*縦幅を変化*/
+    border-radius: 0;/*丸みをなくす*/    
+    transform: scale(0.8, 1);/*X方向0.8、Y方向1にスケール拡大*/
+}
+
+/* .RM a{
+  color: #979797;
+  padding-bottom: 7px;
+} */
+.RM a {
+  margin-top: 10px;
+  display: inline-block; /* リンクをボックスとして扱う */
+  padding: 2px 6px; /* 内側の余白を調整 */
+  border: 3px solid #979797; /* 線の太さと色 */
+  border-radius: 10px; /* 角を丸くする（任意） */
+  text-decoration: none; /* デフォルトの下線を削除 */
+  color: #979797; /* テキストの色 */
+  /* background-color: #f0f0f0; 背景色（任意） */
+}
+
+.RM a:hover {
+  color: #ffffff;
+  border: 3px solid #ffffff; /* 線の太さと色 */
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+/*------------------footer----------------------*/
+footer {
+    margin-top: 20px;
+    height: 100px;
+    /* width: 1600px; */
+    padding-top: 50px;
+    text-align: center;
+    background-color: #666;
+}
+/*----------------------------------------*/
+
+
+/*------------------home----------------------*/
+ #home {
+    height: 100vh;
+    text-align: center;
+    padding-top: 45vh;
+  }
+  #home div {
+    font-size: 1.3rem;
+    letter-spacing: 2px;/*文字間*/
+
+  }
+  @media (max-width: 900px) {
+    #home {
+        padding-top: 38vh;
+        height: 100vh;
+
+    }
+    #home p{
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+  }
+
+#about-home {
+    padding-top: 50vh;
+    height: 100vh;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 5px;/*文字間*/
+}
+#skill-home {
+    padding-top: 50vh;
+    height: 100vh;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 5px;/*文字間*/
+}
+/*----------------------------------------*/
+
+
+/*------------------midasi----------------------*/
+.midasi {
+    position: relative;
+    padding: .3em 0 .2em 2.5em;
+    border-bottom: 3px solid #000000;
+    color: #ffffff;
+}
+
+.midasi::before {
+    position: absolute;
+    top: 0;
+    left: .3em;
+    transform: rotate(55deg);
+    height: 11px;
+    width: 12px;
+    background: #000000;
+    content: '';
+}
+
+.midasi::after {
+    position: absolute;
+    transform: rotate(15deg);
+    top: .6em;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background: #000000;
+    content: '';
+}
+/*----------------------------------------*/
+
+.timeline {
+  list-style: none;
+  margin: 0 0 20px 170px;
+}
+
+  .timeline > li {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .timeline-date {
+    width: 110px;
+    float: left;
+    padding-right: 20px;
+    text-align: right;
+    font-size: large;
+  }
+  .timeline-content {
+    width: 90%;
+    float: left;
+    border-left: 3px #b1b1b1 solid;
+    padding: 30px 0 0 30px;
+  }
+  .timeline-content img {
+    margin-top: 20px;
+    
+  }
+  .timeline img {
+    box-shadow: 15px 15px 15px 0 #000000c3;
+    margin: 20px 20px 0 0;
+    border-radius: 7%;
+  }
+
+  .timeline video {
+    box-shadow: 15px 15px 15px 0 #000000c3;
+    margin: 20px 20px 0 0;
+    border-radius: 7%;
+  }
+
+  
+
+  @media (min-width: 1000px) {
+    .timeline-content:before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: #7c7c7c;
+        position: absolute;
+        left: 106px;
+        top: 39px;
+        border-radius: 100%;
+      }
+      .timeline-date {
+        margin-top: 35px;
+      }
+  }
+
+  @media (max-width: 600px) {
+    .timeline {
+        margin: 0 0 20px 20px;
+      }
+      .timeline-date {
+        text-align: left;
+        font-size: 1.5rem;
+      }
+      .timeline-content {
+        padding: 7px 0 30px 30px;
+      }
+      
+  }
+
+  .PR p{
+    padding: 30px 70px;
+  }
+
+/*------------------skill----------------------*/
+
+
+  .skill-content {
+    margin: 0 0 0 210px;
+  }
+
+  .work{
+    width: 400px;
+    height: auto;
+}
+
+  .skill-content ul {
+    list-style: none;
+  }
+
+  .skill01 {
+    display: flex;
+  }
+  .skill01 h2 {
+    margin-left: 20px;
+    padding: 10px 0;
+  }
+  .skill-content .fadeUpTrigger p {
+    width: 400px;
+    padding: 10px 0 10px 60px;
+  }
+
+  .skill-content .fadeUpTrigger {
+    margin-bottom: 50px
+  }
+  
+
+  
+
+  @media (min-width: 1000px) {
+    .skill-content ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .skill-content .fadeUpTrigger {
+        width: 50%;
+        box-sizing: border-box;
+        margin-bottom: 50px
+      }
+  }
+
+  @media (max-width: 600px) {
+    .skill-content {
+        margin: auto;
+        width: 300px;
+      }
+
+    .work {
+        width: 300px;
+    }
+    .skill-content .fadeUpTrigger p {
+        width: 300px;
+        padding: 10px 0 10px 60px;
+      }
+    
+  }
+  /*----------------------------------------*/
+
+/*========= 1文字ずつ出現させるためのCSS ===============*/
+
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 0.05s ease-out forwards; }
+@keyframes text_anime_on {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+/*==================================================
+ふわっ
+===================================*/
+
+
+/* fadeUp */
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.9s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+     
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+    
+/*========= homeの自己紹介 ===============*/
+#myinfo h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.myinfo-container {
+  display: flex;
+  flex-direction: column;
+  width: auto; 
+  
+}
+
+#myinfo table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(225, 217, 217, 0.296);
+}
+
+#myinfo table tr {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+#myinfo table tr:last-of-type {
+  border-bottom: none;
+}
+
+#myinfo table th,
+#myinfo table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 16px 0 24px 10px;
+  font-weight: normal;
+  line-height: 2em; /* 行の高さを2emに設定 */
+
+  
+}
+
+#myinfo table th {
+  min-width: 6rem;
+}
+
+.googlemap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* 画像間の余白を設定 */
+  /* max-height: 400px;  */
+  /* overflow: hidden;  */
+}
+
+.googlemap img {
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10%;
+}
+
+/* PC用のレイアウトCSS */
+@media (min-width: 900px) {
+  #myinfo {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  #myinfo h3 {
+    text-align: initial;
+  }
+
+  #myinfo table {
+    width: 480px;
+    margin-right: 2rem;
+    padding-left: 10px;
+  }
+
+  .myinfo-container {
+    flex-direction: row; 
+  }
+
+  .googlemap {
+    max-height: 100%; 
+    width: 60%; 
+    max-width: 1000px; 
+  }
+
+  .googlemap img {
+    max-height: 100%;
+    object-fit: contain;
+    /* border-radius: 10%; */
+  }
+}
+    /*========= homeの自己紹介 ===============*/
+    /*========= homeの自己PR ===============*/
+    .pr{
+      margin: 10% 5% 5% 5% ;
+      padding: 10px;
+      background-color: rgba(225, 217, 217, 0.296);
+    }
+
+    .pr p {
+      letter-spacing: 2px; /* 文字と文字の間に2ピクセルのスペースを追加 */
+      line-height: 2em; /* 行の高さを2emに設定 */
+      border-bottom: 3px solid rgb(255, 255, 255);
+      padding-top: 20px;
+    }
+    
+    /*========= homeの自己PR ===============*/
+    .rm {
+      background-color: rgba(225, 217, 217, 0.296);
+      margin-bottom: 30px;
+    }
+    .rm h1 {
+      padding: 10px;
+      text-align: center;
+    }
+    .rm-container {
+      margin: 0 10% 0 10%;
+      display: flex;
+      align-items: flex-start; /* 要素を上揃えにします */
+  }
+  
+  .pdf{
+      margin: 10px; /* オプション: 要素間に余白を追加 */
+  }
+
+  .rm table {
+    width: auto;
+    margin: 30px 0 30px 50px;
+    padding: 10px;
+    background-color: rgba(57, 57, 57, 0.371);
+  }
+
+  .rm table tr {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  
+  .rm table tr:last-of-type {
+    border-bottom: none;
+  }
+  
+  .rm table th,
+  .rm table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 16px 0 24px;
+    font-weight: normal;
+    line-height: 2em; /* 行の高さを2emに設定 */
+  
+    
+  }
+  
+  .rm table th {
+    min-width: 6rem;
+  }
+
+
+  @media (max-width: 900px) {
+    .rm-container {
+      display: inline;
+      text-align: center;
+    }
+    .rm table {
+      text-align: center;
+      margin: auto;
+    }
+    .rm embed,
+    .rm img
+    {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .work,
+    .skill-content video,
+    .timeline img,
+    .timeline video
+    {
+      width: 80%;
+    }
+  }
+
+
+
+  
