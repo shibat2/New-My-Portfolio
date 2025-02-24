@@ -2,11 +2,121 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
+    <a href="#home" id="page-top">TOP</a>
 <body>
-    <h1>準備中です</h1>
-    
+    <div class="background">
+        <!-- ------------------------------------------固定header------------------------------------------ -->
+        <header>
+            <div>
+                <a href="index.html"><img src="img/icon3.png" alt="my logo" width="70px" height="70px"></a>
+            </div>
+            <nav>
+                <ul class="gnavi">
+                    <li class="here"><a href="#home">Home</a></li>
+                    <li><a href="about.html">Experience</a></li>
+                    <li><a href="skill.html">Skill</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ------------------------------------------固定header------------------------------------------ -->
+
+
+        <!-- ------------------------------------------   中身   ------------------------------------------ -->
+        <!-- Homeセクション -->
+        <section id="home">
+            <div>
+            <h1 class="eachTextAnime">YURIKO SHIBATA</h1>
+            <p >愛知工業大学　情報科学科　メディア情報専攻<br><br>MY PORTFOLIO SITE</p>
+            </div>
+        </section>
+
+        <!-- 自己紹介セクション -->
+        <section id="myinfo">
+            <h3 class="box fadeUpTrigge">自己紹介</h3>
+            <div class="myinfo-container">
+                <!-- 自己紹介表 -->
+                <table>
+                    <tbody>
+                    <tr class="box fadeUpTrigger"><th>在住</th><td>三重県鈴鹿市</td></tr>
+                    <tr class="box fadeUpTrigger"><th>連絡先</th><td>080-5829-1504<br>yuringo.shibarin@ezweb.ne.jp</td></tr>
+                    <!-- <tr class="box fadeUpTrigger"><th>経歴</th><td>「東京ゲームショウ」,「ゲームマーケット」 作品提出<br>「WINF」,「情報処理学会DCC研究会」 学会発表<br>「ASSETS 2023 SIGGRAPH」 に作品投稿<br>株式会社CBCテレビ(Dテック)アルバイト</td></tr> -->
+                    <tr class="box fadeUpTrigger"><th>趣味</th><td>映画鑑賞(特に洋画が好きです)<br>ハンドボール(スポーツ大好きです)<!--<br>ドライブ()--></td></tr>
+                    <tr class="box fadeUpTrigger"><th>性格</th><td>「変なところでまじめ」弱みでもあり、最大の強みでもある！</td></tr>
+                    <tr class="box fadeUpTrigger"><th>将来の自分</th><td>最新の情報やコンテンツに敏感であり続けたい！</td></tr>
+                    </tbody>
+                </table>
+                <!-- 自己紹介写真 -->
+                <div class="googlemap">
+                    <img class="box fadeUpTrigger" src="img/me1.jpg" >
+                    <img class="box fadeUpTrigger" src="img/me2.jpg" >
+                    <img class="box fadeUpTrigger" src="img/me3.jpg" >
+                    <img class="box fadeUpTrigger" src="img/me4.jpg" >
+                </div>
+            </div>
+        </section>
+        <!-- ------------------------------------------   中身   ------------------------------------------ -->
+
+
+        <!-- 自己PRセクション -->
+        <!-- <section class="pr">
+            <div>
+                <h1 class="box fadeUpTrigge">自己PR</h1>
+                <p>
+                　私の長所は、タスクや学習において目的や意味を理解しようとする性格です。<br>
+                　クッキー作りが好きなのですが、バターを電子レンジで液体にしてしまうとクッキーは石のように固く仕上がります。「バターを常温で溶かす」理由は、サクサクとした軽い食感になるからです。一つ一つの作業の意味を知ることで質の高い行動ができると気づきました。<br>
+                　この特性はプログラミングでも発揮され、コードの挙動を理解していることで、友人のエラーの原因を解析しアドバイスすることができました。<br>
+                　この長所を生かし、職場で与えられたタスクの目的を把握し、臨機応変に質の高い対応ができる人材として貢献します。
+                </p>
+                <p>
+                　私の長所は、一つのことを極める責任感です。<br>
+                　中高の団体スポーツで自分のミスによる失敗を何度も経験し、責任感が培われました。大学では作品の学会発表で高評価を得て、この責任感から次の仕事も任されるなど、多くのチャレンジをする機会を得ました。<br>
+                　今後もこの強みを活かし、信頼され、様々なことへチャレンジさせられる人材を目指します。<br>
+                </p>
+            </div>
+        </section> -->
+
+
+        
+
+        <!-- 画像スライド -->
+        <!-- <div class="photo">
+            <ul class="slider">
+            <li><img src="img/ai-food.png" alt=""></li>
+            <li><img src="img/ai.png" alt=""></li>
+            <li><img src="img/pr-img.png" alt=""></li>
+            <li><img src="img/maya2.png" alt=""></li>
+            <li><img src="img/winf.JPG" alt=""></li>
+            </ul>
+        </div> -->
+
+        <!-- ------------------------------------------固定footer------------------------------------------ -->
+        <footer class="footer">
+            <p>&copy; YURIKO SHIBATA 2022-2026</p>
+        </footer>
+        <!-- ------------------------------------------固定footer------------------------------------------ -->
+
+        <!-- 画像スライド -->
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="kadai.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+        <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-11/js/8-11.js"></script> -->
+
+        
+
+        </div>
 </body>
 </html>
