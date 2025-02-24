@@ -9,7 +9,7 @@
 
 body {
     background: linear-gradient(rgba(30, 15, 0, 0.5), rgba(30, 15, 0, 0.5)),
-      url(img/bg.jpg);
+      url(images/bg.jpg);
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
