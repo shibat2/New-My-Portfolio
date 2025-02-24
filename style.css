@@ -4,14 +4,18 @@
     box-sizing: content-box;
     color: #ffffff;
 }
-
 body {
-        background: linear-gradient(rgba(30, 15, 0, 0.5), rgba(30, 15, 0, 0.5)),
-        url(images/bg.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        font-family: 'Roboto Mono', monospace;
+    /* 背景 */
+    background: linear-gradient(rgba(30, 15, 0, 0.5), rgba(30, 15, 0, 0.5)),url(images/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto Mono', monospace;
+
+}
+html{
+    /* スクロール */
+    scroll-behavior: smooth;
 }
 a {
     text-decoration: none;
@@ -24,11 +28,62 @@ a {
 } 
 
 
-:root,
-html {
-    /* スムーススクロール用 */
-    scroll-behavior: smooth;
-}
+
+/*------------------ヘッダーを上部に固定----------------------*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999; /*重なりを調整*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(30, 15, 0, 0.5);
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  header ul li a {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  @media (min-width: 769px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 24px 0 60px;
+    }
+    header ul {
+      margin-top: 0;
+      height: 100%;
+    }
+    header li {
+      display: flex;
+      align-items: center;
+    }
+    header div {
+        margin-top: 10px;
+    }
+    
+    
+  }
+  @media (max-width: 760px) {
+    header div {
+      width: 100%; /* 幅を100%に設定 */
+      text-align: center;
+      margin: 20px auto; /* 上下のマージンを20px、左右のマージンをautoに設定 */
+    }
+  }
+  /*----------------------------------------*/
 
 #header-logo{
     font-family: "Damion", serif;
@@ -169,85 +224,19 @@ html {
 
 /*------------------矢印の設定----------------------*/
 
-
-/*------------------ヘッダーを上部に固定----------------------*/
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 9999; /*重なりを調整*/
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(30, 15, 0, 0.5);
-  }
-  
-  header ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  header ul li a {
-    display: inline-block;
-    font-size: 1.3rem;
-    font-weight: 700;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  
-  @media (min-width: 769px) {
-    header {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0 24px 0 60px;
-    }
-    header ul {
-      margin-top: 0;
-      height: 100%;
-    }
-    header li {
-      display: flex;
-      align-items: center;
-    }
-    header div {
-        margin-top: 10px;
-    }
-    
-    
-  }
-  @media (max-width: 760px) {
-    header div {
-      width: 100%; /* 幅を100%に設定 */
-      text-align: center;
-      margin: 20px auto; /* 上下のマージンを20px、左右のマージンをautoに設定 */
-    }
-  }
-  /*----------------------------------------*/
-
-
-/*==================================================
-　5-3-8 円が線に変化
-===================================*/
-
-
-.gnavi li a{
-    /*円の基点とするためrelativeを指定*/
+/* ---------------- headerのgnavi ---------------- */
+header li a{
   position: relative;
   text-decoration: none;
 }
 
-.gnavi li.here a,
-.gnavi li a:hover
+#here,
+header li a:hover
 {
   color:#979797;
 }
-.RM a:hover{
-  color:#ffffff;
-}
 
-.gnavi li a::after
+header li a::after
 {
     content: '';
     /*絶対配置で線の位置を決める*/
@@ -266,8 +255,8 @@ header {
 }
 
 /*現在地とhoverの設定*/
-.gnavi li.here a::after,
-.gnavi li a:hover::after{
+header li.here a::after,
+header li a:hover::after{
     height: 2px;/*縦幅を変化*/
     border-radius: 0;/*丸みをなくす*/    
     transform: scale(0.8, 1);/*X方向0.8、Y方向1にスケール拡大*/
@@ -277,6 +266,11 @@ header {
   color: #979797;
   padding-bottom: 7px;
 } */
+
+.RM a:hover{
+    color:#ffffff;
+}
+
 .RM a {
   margin-top: 10px;
   display: inline-block; /* リンクをボックスとして扱う */
