@@ -255,7 +255,7 @@ header li a::after
 }
 
 /*現在地とhoverの設定*/
-header li.here a::after,
+#here::after,
 header li a:hover::after{
     height: 2px;/*縦幅を変化*/
     border-radius: 0;/*丸みをなくす*/    
@@ -326,14 +326,7 @@ footer {
     }
   }
 
-#topics-home {
-    padding-top: 50vh;
-    height: 100vh;
-    text-align: center;
-    font-size: 1.3rem;
-    letter-spacing: 5px;/*文字間*/
-}
-#skill-home {
+#home {
     padding-top: 50vh;
     height: 100vh;
     text-align: center;
