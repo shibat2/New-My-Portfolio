@@ -11,10 +11,8 @@ body {
     background-size: cover;
     background-position: center;
     font-family: 'Roboto Mono', monospace;
-
 }
 html{
-    /* スクロール */
     scroll-behavior: smooth;
 }
 a {
@@ -29,7 +27,7 @@ a {
 
 
 
-/*------------------ヘッダーを上部に固定----------------------*/
+/*------------------ヘッダー関連----------------------*/
 header {
     position: fixed;
     width: 100%;
@@ -49,14 +47,58 @@ header {
   }
   header ul li a {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 23px;
     font-weight: 700;
     padding: 0.5rem 1.5rem;
     text-decoration: none;
     transition: all 0.3s;
   }
+
+  header li a{
+    position: relative;
+    text-decoration: none;
+  }
   
-  @media (min-width: 769px) {
+  /* ------デザイン 動き------ */
+  #here::after,
+  header li a:hover::after{
+      height: 2px;
+      border-radius: 0;  
+      transform: scale(0.8, 1);
+  }
+  header li a::after
+  {
+      /*絶対配置で線の位置を決める*/
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      /*線の形状*/
+      width: 100%;
+      height: 5px;
+      border-radius: 50%;
+      background:#ffffff;
+      /*アニメーションの指定*/
+      transition: all .3s;
+      transform: scale(0.04, 1);
+      /* transform-origin:center bottom; */
+  }
+  #here,
+  #header-logo h1:hover,
+  header li a:hover
+  {
+    color:#979797;
+  }
+
+/* ------ロゴ------ */
+#header-logo{
+  font-family: "Damion", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* padding: 5px; */
+}
+  
+@media (min-width: 600px) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -73,24 +115,16 @@ header {
     header div {
         margin-top: 10px;
     }
-    
-    
-  }
-  @media (max-width: 760px) {
+}
+@media (max-width: 600px) {
     header div {
       width: 100%; /* 幅を100%に設定 */
       text-align: center;
       margin: 20px auto; /* 上下のマージンを20px、左右のマージンをautoに設定 */
     }
-  }
-  /*----------------------------------------*/
-
-#header-logo{
-    font-family: "Damion", serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 5px;
 }
+/*------------------ヘッダー関連----------------------*/
+
 
 
 
@@ -225,42 +259,7 @@ header {
 /*------------------矢印の設定----------------------*/
 
 /* ---------------- headerのgnavi ---------------- */
-header li a{
-  position: relative;
-  text-decoration: none;
-}
 
-#here,
-header li a:hover
-{
-  color:#979797;
-}
-
-header li a::after
-{
-    content: '';
-    /*絶対配置で線の位置を決める*/
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    /*線になる丸の形状*/
-    width: 100%;
-    height: 5px;
-    border-radius: 50%;
-    background:#ffffff;
-    /*アニメーションの指定*/
-    transition: all .3s;
-    transform: scale(0.04, 1);/*X方向0.04、Y方向1*/
-    transform-origin:center bottom;/*中央下部基点*/
-}
-
-/*現在地とhoverの設定*/
-#here::after,
-header li a:hover::after{
-    height: 2px;/*縦幅を変化*/
-    border-radius: 0;/*丸みをなくす*/    
-    transform: scale(0.8, 1);/*X方向0.8、Y方向1にスケール拡大*/
-}
 
 /* .RM a{
   color: #979797;
