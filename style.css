@@ -90,7 +90,6 @@ header li a::after
 	transform: scale(0.04, 1);
 	/* transform-origin:center bottom; */
 }
-  
 @media (max-width: 600px) {
     header {
         flex-direction: column; /* ロゴとナビゲーションを縦に並べる */
@@ -98,9 +97,37 @@ header li a::after
         padding: 10px 20px;
 	}
 }
-
 /*------------------ヘッダー関連----------------------*/
+/*------------------home----------------------------*/
+#home {
+    height: 100vh;
+    text-align: center;
+	display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+#home h1{
+	font-size: 35px;
+	letter-spacing: 5px;
+}
+#home p{
+	font-size: 20px;
+	letter-spacing: 5px;
+}
+@media (max-width: 900px) {
+    #home {
+        padding-top: 38vh;
+        height: 100vh;
 
+    }
+    #home p{
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+  }
+/*--------------------------------------------------*/
 
 
 
@@ -276,41 +303,6 @@ footer {
     background-color: #666;
 }
 /*----------------------------------------*/
-
-
-/*------------------home----------------------*/
- #home {
-    height: 100vh;
-    text-align: center;
-    padding-top: 45vh;
-  }
-  #home div {
-    font-size: 1.3rem;
-    letter-spacing: 2px;/*文字間*/
-
-  }
-  @media (max-width: 900px) {
-    #home {
-        padding-top: 38vh;
-        height: 100vh;
-
-    }
-    #home p{
-        font-size: 0.9rem;
-        letter-spacing: 3px;
-    }
-  }
-
-#home {
-    padding-top: 50vh;
-    height: 100vh;
-    text-align: center;
-    font-size: 1.3rem;
-    letter-spacing: 5px;/*文字間*/
-}
-/*----------------------------------------*/
-
-
 /*------------------midasi----------------------*/
 .midasi {
     position: relative;
