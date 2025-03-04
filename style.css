@@ -107,25 +107,24 @@ header li a::after
     justify-content: center; 
     align-items: center; 
     text-align: center; 
+	letter-spacing: 5px;
 }
 #home h1{
-	font-size: 35px;
-	letter-spacing: 5px;
+	font-size: 33px;
 }
 #home p{
 	font-size: 20px;
-	letter-spacing: 5px;
 }
 @media (max-width: 900px) {
-    #home {
-        padding-top: 38vh;
-        height: 100vh;
-
-    }
-    #home p{
-        font-size: 0.9rem;
-        letter-spacing: 3px;
-    }
+	#home {
+		letter-spacing: 3px;
+	}
+	#home h1{
+		font-size: 30px;
+	}
+	#home p{
+		font-size: 15px;
+	}
   }
 /*--------------------------------------------------*/
 
