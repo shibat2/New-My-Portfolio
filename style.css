@@ -38,7 +38,6 @@ header {
     background-color: rgb(0, 0, 0);
 	padding: 10px 20px;
 	box-sizing: border-box;
-
 }
 header ul {
 	display: flex;
@@ -129,6 +128,13 @@ header li a::after
 /*--------------------------------------------------*/
 
 
+/*------------------footer--------------------------*/
+footer {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #979797;
+}
+/*--------------------------------------------------*/
 
   
 
@@ -292,16 +298,7 @@ header li a::after
 
 
 
-/*------------------footer----------------------*/
-footer {
-    margin-top: 20px;
-    height: 100px;
-    /* width: 1600px; */
-    padding-top: 50px;
-    text-align: center;
-    background-color: #666;
-}
-/*----------------------------------------*/
+
 /*------------------midasi----------------------*/
 .midasi {
     position: relative;
