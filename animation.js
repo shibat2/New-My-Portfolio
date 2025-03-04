@@ -85,5 +85,38 @@ function fadeAnime(){
     $(window).on('load', function(){
       fadeAnime();/* アニメーション用の関数を呼ぶ*/
     });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+/*------------------index.html-works-----------------*/
+var openBtns = document.querySelectorAll(".open-modal");
+var modals = document.querySelectorAll(".modal");
+var closeBtns = document.querySelectorAll(".close-modal");
+
+// クリックで対応するモーダルを開く
+openBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+        var targetModal = document.getElementById(this.dataset.target);
+        if (targetModal) {
+            targetModal.style.display = "block";
+        }
+    });
+});
+
+// 閉じるボタンでモーダルを閉じる
+closeBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+        this.closest(".modal").style.display = "none";
+    });
+});
+
+// モーダルの外側をクリックしたら閉じる
+window.addEventListener("click", function(event) {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+
   
   
