@@ -202,10 +202,12 @@ header li a::after
 	display: block;
 	border-radius: 20px;
 }
-#modal2-mov {
+#modal2-mov,
+#modal3-mov {
 	border-radius: 20px;
 }
-#myModal2 video {
+#myModal2 video,
+#myModal3 video {
 	height: 70%;
 	width: auto;
 	display: block;
