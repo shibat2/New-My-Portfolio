@@ -179,36 +179,41 @@ header li a::after
 	padding: 20px;
 	width: 60%; 
 	height: 50%; 
-	background-color: #fefefe; 
+	background-color: #ccc; 
 	border: 1px solid #888;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 55px;
-
 }
-#modal-img {
+#modal1-img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 15px;
-	width: 60%;
+	width: 50%;
 	height: 100%;
-	background-color: #ccc;
-	border: #ccc;
-	border-radius: 10px;
 }
 #myModal1 img {
-	height: 45%;
+	height: 48%;
+	width: auto;
+	display: block;
+	border-radius: 20px;
+}
+#modal2-mov {
+	border-radius: 20px;
+}
+#myModal2 video {
+	height: 70%;
 	width: auto;
 	display: block;
 }
 .modal p {
 	color: #000;
 	font-size: 17px;
-	margin: 0 20px;
+	margin: 0 20px 0 0;
 }
 .close-modal {
 	position: absolute;
