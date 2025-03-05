@@ -133,7 +133,7 @@ header li a::after
 	justify-content: center;
 	gap: 70px;
 	width: 100%;
-	margin: 0 auto 100px auto;
+	margin: 100px auto 100px auto;
 }
 .button-container::after {
 	content: "";
@@ -182,11 +182,37 @@ header li a::after
 	background-color: #fefefe; 
 	border: 1px solid #888;
 	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 55px;
+
+}
+#modal-img {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	width: 60%;
+	height: 100%;
+	background-color: #ccc;
+	border: #ccc;
+	border-radius: 10px;
+}
+#myModal1 img {
+	height: 45%;
+	width: auto;
+	display: block;
+}
+.modal p {
+	color: #000;
+	font-size: 17px;
+	margin: 0 20px;
 }
 .close-modal {
 	position: absolute;
 	display: flex;
-	/* align-items: center; */
 	justify-content: center;
 	top: -10%;
 	right: -5%;
@@ -200,6 +226,7 @@ header li a::after
 	border: #333;
 	border-radius: 50%;
 }
+
 @media (max-width: 600px) {
 	.button-container  a {
 		width: 80%;
