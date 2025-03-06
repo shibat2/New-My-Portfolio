@@ -12,6 +12,12 @@ body {
     background-position: center;
     font-family: 'Roboto Mono', monospace;
 }
+#about-bg {
+	background-image: linear-gradient(rgba(133, 133, 133, 0.5), rgba(0, 0, 0, 0.5)),url(images/about-bg.jpg);
+	/* background-attachment: fixed; */
+	background-size: cover;
+	background-position: center;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -260,6 +266,101 @@ header li a::after
 		margin: 0 0 20px 0;
 	}
 }
+/*--------------------------------------------------*/
+
+/*----------------about.html-myinfo-----------------*/
+#myinfo h1 {
+	/* text-align: center; */
+	font-size: 2rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+  
+  .myinfo-container {
+	display: flex;
+	flex-direction: column;
+	width: auto; 
+	
+  }
+  
+  #myinfo table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: rgba(225, 217, 217, 0.296);
+  }
+  
+  #myinfo table tr {
+	border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  
+  #myinfo table tr:last-of-type {
+	border-bottom: none;
+  }
+  
+  #myinfo table th,
+  #myinfo table td {
+	text-align: left;
+	vertical-align: top;
+	padding: 16px 0 24px 10px;
+	font-weight: normal;
+	line-height: 2em; /* 行の高さを2emに設定 */
+  
+	
+  }
+  
+  #myinfo table th {
+	min-width: 6rem;
+  }
+  
+  .googlemap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem; /* 画像間の余白を設定 */
+	/* max-height: 400px;  */
+	/* overflow: hidden;  */
+  }
+  
+  .googlemap img {
+	max-width: 40%;
+	height: auto;
+	object-fit: contain;
+	border-radius: 10%;
+  }
+  
+  /* PC用のレイアウトCSS */
+  @media (min-width: 900px) {
+	#myinfo {
+	  max-width: 1300px;
+	  margin: 0 auto;
+	}
+  
+	#myinfo h3 {
+	  text-align: initial;
+	}
+  
+	#myinfo table {
+	  width: 480px;
+	  margin-right: 2rem;
+	  padding-left: 10px;
+	}
+  
+	.myinfo-container {
+	  flex-direction: row; 
+	}
+  
+	.googlemap {
+	  max-height: 100%; 
+	  width: 60%; 
+	  max-width: 1000px; 
+	}
+  
+	.googlemap img {
+	  max-height: 100%;
+	  object-fit: contain;
+	  /* border-radius: 10%; */
+	}
+  }
 /*--------------------------------------------------*/
 
 
@@ -638,114 +739,24 @@ footer {
         opacity: 0;
     }
     
-/*========= homeの自己紹介 ===============*/
-#myinfo h3 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: normal;
-  margin-bottom: 2rem;
-}
 
-.myinfo-container {
-  display: flex;
-  flex-direction: column;
-  width: auto; 
-  
-}
-
-#myinfo table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: rgba(225, 217, 217, 0.296);
-}
-
-#myinfo table tr {
-  border-bottom: 1px solid rgb(255, 255, 255);
-}
-
-#myinfo table tr:last-of-type {
-  border-bottom: none;
-}
-
-#myinfo table th,
-#myinfo table td {
-  text-align: left;
-  vertical-align: top;
-  padding: 16px 0 24px 10px;
-  font-weight: normal;
-  line-height: 2em; /* 行の高さを2emに設定 */
-
-  
-}
-
-#myinfo table th {
-  min-width: 6rem;
-}
-
-.googlemap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem; /* 画像間の余白を設定 */
-  /* max-height: 400px;  */
-  /* overflow: hidden;  */
-}
-
-.googlemap img {
-  max-width: 40%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 10%;
-}
-
-/* PC用のレイアウトCSS */
-@media (min-width: 900px) {
-  #myinfo {
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-
-  #myinfo h3 {
-    text-align: initial;
-  }
-
-  #myinfo table {
-    width: 480px;
-    margin-right: 2rem;
-    padding-left: 10px;
-  }
-
-  .myinfo-container {
-    flex-direction: row; 
-  }
-
-  .googlemap {
-    max-height: 100%; 
-    width: 60%; 
-    max-width: 1000px; 
-  }
-
-  .googlemap img {
-    max-height: 100%;
-    object-fit: contain;
-    /* border-radius: 10%; */
-  }
-}
-    /*========= homeの自己紹介 ===============*/
-    /*========= homeの自己PR ===============*/
-    .pr{
-      margin: 10% 5% 5% 5% ;
-      padding: 10px;
-      background-color: rgba(225, 217, 217, 0.296);
-    }
-
-    .pr p {
-      letter-spacing: 2px; /* 文字と文字の間に2ピクセルのスペースを追加 */
-      line-height: 2em; /* 行の高さを2emに設定 */
-      border-bottom: 3px solid rgb(255, 255, 255);
-      padding-top: 20px;
-    }
     
+/* ------------------------------------------ボツ項目------------------------------------------ */
+
+/*========= homeの自己PR ===============*/
+.pr{
+	margin: 10% 5% 5% 5% ;
+	padding: 10px;
+	background-color: rgba(225, 217, 217, 0.296);
+  }
+
+  .pr p {
+	letter-spacing: 2px; /* 文字と文字の間に2ピクセルのスペースを追加 */
+	line-height: 2em; /* 行の高さを2emに設定 */
+	border-bottom: 3px solid rgb(255, 255, 255);
+	padding-top: 20px;
+  }
+
     /*========= homeの自己PR ===============*/
     .rm {
       background-color: rgba(225, 217, 217, 0.296);
