@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 body {
     /* 背景 */
@@ -13,7 +13,7 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 #about-bg {
-	background-image: linear-gradient(rgba(133, 133, 133, 0.5), rgba(0, 0, 0, 0.5)),url(images/about-bg.jpg);
+	background-image: linear-gradient(rgba(201, 201, 201, 0.299), rgba(200, 200, 200, 0.3)),url(images/about-bg.jpg);
 	/* background-attachment: fixed; */
 	background-size: cover;
 	background-position: center;
@@ -56,6 +56,7 @@ header ul a {
 	/* transition: all 0.3s; */
 	position: relative;
 	text-decoration: none;
+	color: #ffffff;
 }
 /* ------ロゴ------ */
 #header-logo{
@@ -64,6 +65,7 @@ header ul a {
 	font-weight: 400;
 	font-style: normal;
 	display: inline-block;
+	color: #ffffff;
 }
 /* ------hover------ */
 #here,
@@ -116,9 +118,11 @@ header li a::after
 }
 #home h1{
 	font-size: 33px;
+	color: #ffffff;
 }
 #home p{
 	font-size: 20px;
+	color: #ffffff;
 }
 @media (max-width: 600px) {
 	#home {
@@ -269,44 +273,93 @@ header li a::after
 /*--------------------------------------------------*/
 
 /*----------------about.html-myinfo-----------------*/
+#myinfo {
+  background-color: #f2e0d1;
+  padding: 150px 120px;
+}
 #myinfo h1 {
-	/* text-align: center; */
+	color: #7c614e;
+	font-size: 50px;
+}
+#name{
+	color: #7c614e;
+	font-size: 30px;
+}
+#myinfo-container {
+	display: flex;
+	padding-top: 100px;
+	justify-content: center;
+	/* justify-content: space-between; */
+}
+#PR {
+	color: #7c614e;
+	font-size: 20px;
+	width: 60%;
+	height: auto;
+}
+#myphoto {
+	width: 40%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px; 
+}
+#myphoto img {
+	width: 40%;
+	height: auto;
+	border-radius: 10%;
+}
+/* .googlemap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem; 
+  }
+  
+  .googlemap img {
+	max-width: 40%;
+	height: auto;
+	object-fit: contain;
+	border-radius: 10%;
+  }  */
+
+/* #myinfo h1 {
 	font-size: 2rem;
 	font-weight: normal;
 	margin-bottom: 2rem;
+  color: #000;
 }
   
-  .myinfo-container {
+.myinfo-container {
 	display: flex;
 	flex-direction: column;
 	width: auto; 
-	
-  }
+}
   
-  #myinfo table {
+#myinfo table {
 	width: 100%;
 	border-collapse: collapse;
 	background-color: rgba(225, 217, 217, 0.296);
-  }
+}
   
-  #myinfo table tr {
+#myinfo table tr {
 	border-bottom: 1px solid rgb(255, 255, 255);
-  }
+}
   
-  #myinfo table tr:last-of-type {
+#myinfo table tr:last-of-type {
 	border-bottom: none;
-  }
+}
   
-  #myinfo table th,
-  #myinfo table td {
+#myinfo table th,
+#myinfo table td {
 	text-align: left;
 	vertical-align: top;
 	padding: 16px 0 24px 10px;
 	font-weight: normal;
-	line-height: 2em; /* 行の高さを2emに設定 */
-  
-	
-  }
+	line-height: 2em; 
+	color: #000;
+}
   
   #myinfo table th {
 	min-width: 6rem;
@@ -316,9 +369,7 @@ header li a::after
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 1rem; /* 画像間の余白を設定 */
-	/* max-height: 400px;  */
-	/* overflow: hidden;  */
+	gap: 1rem; 
   }
   
   .googlemap img {
@@ -326,10 +377,10 @@ header li a::after
 	height: auto;
 	object-fit: contain;
 	border-radius: 10%;
-  }
+  } */
   
   /* PC用のレイアウトCSS */
-  @media (min-width: 900px) {
+  /* @media (min-width: 900px) {
 	#myinfo {
 	  max-width: 1300px;
 	  margin: 0 auto;
@@ -358,9 +409,8 @@ header li a::after
 	.googlemap img {
 	  max-height: 100%;
 	  object-fit: contain;
-	  /* border-radius: 10%; */
-	}
-  }
+	} 
+  }*/
 /*--------------------------------------------------*/
 
 
