@@ -206,8 +206,7 @@ header li a::after
 	align-items: center;
 	gap: 55px;
 }
-#modal1-img,
-#modal4-img {
+#modal1-img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -216,10 +215,23 @@ header li a::after
 	width: 50%;
 	height: 100%;
 }
-#myModal1 img,
-#myModal4 img {
+#modal4-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	width: 80%;
+	height: 100%;
+}
+#myModal1 img {
 	height: 48%;
 	width: auto;
+	display: block;
+	border-radius: 20px;
+}
+#myModal4 img {
+	height: auto;
+	width: 100%;
 	display: block;
 	border-radius: 20px;
 }
