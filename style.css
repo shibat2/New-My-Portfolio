@@ -324,6 +324,9 @@ header li a::after
 		max-height: 70vh; /* はみ出し防止 */
     	flex-basis: 50%;  /* Safariのflexboxバグ対策 */
 	}
+	#modal1-img {
+		gap: 15px;
+	}
 	#modal2-mov,
 	#modal3-mov {
 		width: 100%;
