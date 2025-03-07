@@ -14,7 +14,7 @@ body {
 }
 #about-bg {
 	background-image: linear-gradient(rgba(201, 201, 201, 0.299), rgba(200, 200, 200, 0.3)),url(images/about-bg.jpg);
-	/* background-attachment: fixed; */
+	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 }
@@ -30,15 +30,20 @@ ul{
 @media (max-width: 600px) {
     body {    
         background: linear-gradient(rgba(30, 15, 0, 0.5), rgba(30, 15, 0, 0.5)),url(images/bg-rotate.jpg);
-		background-attachment: fixed;
     	background-position: -35px center;
+		background-attachment: fixed;
+		/* background-attachment: local; */
 		background-size: auto 100vh;
+		/* background-size: cover; */
+
     }
 	#about-bg{
 		background-image: linear-gradient(rgba(201, 201, 201, 0.299), rgba(200, 200, 200, 0.3)),url(images/about-bg-rotate.jpg);
-		background-attachment: fixed;
     	background-position: 0px center;
-		background-size: auto 100vh;
+		/* background-attachment: fixed; */
+		/* background-attachment: local; */
+		/* background-size: auto 100vh; */
+		/* background-size: cover; */
 	}
 } 
 
@@ -219,7 +224,7 @@ header li a::after
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 15px;
+	gap: 10px;
 	width: 80%;
 	height: 100%;
 }
@@ -267,7 +272,7 @@ header li a::after
 	border-radius: 50%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
 	.button-container  a {
 		width: 80%;
 	}
@@ -286,7 +291,7 @@ header li a::after
 		height: 70%;
 	}
 	#myModal4 img {
-		width: 100%;
+		width: 90%;
 		height: auto;
 	}
 	#myModal2 video,
@@ -358,15 +363,15 @@ header li a::after
 		height: auto;
 	}
 	#myphoto {
-		width: auto;
-		height: 40%;
+		width: 100%;
+		height: auto;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 20px; 
+		gap: 10px; 
 		margin-top: 40px;
 	}
 	#myphoto img {
-		width: 47%;
+		width: 45%;
 	}
 }
 /*--------------------------------------------------*/
